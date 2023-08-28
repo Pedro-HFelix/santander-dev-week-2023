@@ -9,6 +9,6 @@ public interface UserService {
 
     User create(User userTocreate);
 
-    User delete(Long id);
+    void deleteById(Long id);
 
 }
