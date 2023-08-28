@@ -31,5 +31,9 @@ public class UserController {
                 .toUri();
         return ResponseEntity.created(location).body(userCreated);
     }
-    //not, this is for test
+    @DeleteMapping("/{id}")
+    public ResponseEntity<User> deleteById(@PathVariable Long id){
+        var user = userService.delete(id);
+        return ResponseEntity.ok(user);
+    }
 }
